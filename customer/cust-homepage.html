@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Terbuka F&B - Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="cust-homepagestyle.css">
+    <script src="https://kit.fontawesome.com/7617b7392d.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="burger-icon"></div>
+        </div>
+        <a href="cust-homepage.html" class="logo"><img src="../images/logout.png" width="100px" ></a>
+        <ul>
+            <li><a href="../customer/cust-homepage.html">HOME</a></li>
+            <li><a href="../customer/catalogue.html">CATALOGUE</a></li>
+            <li><a href="../general/about-us.html">ABOUT US</a></li>
+        </ul>
+        <div class="icons">
+            <a href="cust-cart.html">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="cust-profile.html">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+        <div class="burger-menu">
+            <div class="burger-icon"></div>
+        </div>
+    </header>
+    
+    <section class="banner">
+        <div class="text-box">
+            <h1>UNIVERSITAS TERBUKA</h1>
+            <h2>FOOD AND BEVERAGE</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditatxplicabo, vitae error est ab fuga!</p>
+        </div>
+    </section>
+    
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
+
+    <!-- BODY -->
+    <section class="featured-vendors">
+        <div class="container">
+            <h2>Featured Vendors</h2><hr><br>
+            <div class="row">
+                <div class="vendor-col">
+                    <h3>Nama Vendor1</h3>
+                    <img src="/images/vendor.jpg" alt="vendor1">
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis optio maioresaliquid.
+                    </h5>
+                    <p>Lokasi vendor</p>
+                </div>
+
+                <div class="vendor-col">
+                    <h3>Nama Vendor2</h3>
+                    <img src="/images/vendor.jpg" alt="vendor2">
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quissss brooo.
+                    </h5>
+                    <p>Lokasi vendor</p>
+                </div>
+
+                <div class="vendor-col">
+                    <h3>Nama Vendor3</h3>
+                    <img src="/images/vendor.jpg" alt="vendor3">
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis optio maior aliquid.
+                    </h5>
+                    <p>Lokasi vendor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommended">
+        <div class="container">
+            <h2>Recommended Meals for The Day</h2><hr><br>
+            <div class="row">
+                <div class="meal-col">
+                    <h3>Nama Makanan1</h3>
+                    <img src="/images/recommendedmeal.jpg" alt="makanan1">
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
+                    </h5>
+                    <p>Harga</p>
+                </div>
+
+                <div class="meal-col">
+                    <h3>Nama Makanan2</h3>
+                    <img src="/images/recommendedmeal.jpg" alt="makanan2">
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis optio maiores nulla eveniet.
+                    </h5>
+                    <p>Harga</p>
+                </div>
+
+                <div class="meal-col">
+                    <h3>Nama Makanan3</h3>
+                    <img src="/images/recommendedmeal.jpg" alt="makanan3">
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui
+                    </h5>
+                    <p>Harga</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="meal-col">
+                    <h3>Nama Makanan4</h3>
+                    <img src="/images/recommendedmeal.jpg" alt="makanan4">
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis optio maiores nulla eveniet placeat reic
+                    </h5>
+                    <p>Harga</p>
+                </div>
+
+                <div class="meal-col">
+                    <h3>Nama Makanan5</h3>
+                    <img src="/images/recommendedmeal.jpg" alt="makanan5">
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis optio maiores nulla eveniet placeat rei
+                    </h5>
+                    <p>Harga</p>
+                </div>
+
+                <div class="meal-col">
+                    <h3>Nama Makanan6</h3>
+                    <img src="/images/recommendedmeal.jpg" alt="makanan6">
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis optio maiores nulla eveniet placeat.
+                    </h5>
+                    <p>Harga</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <div class="catalogue-forward">
+        <h2>
+            Want to see more menus? Go to our catalogue <a href="catalogue.html">here</a>
+        </h2>
+    </div>
+
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <script src="https://kit.fontawesome.com/7617b7392d.js" crossorigin="anonymous"></script>
+            <div class="col-1">
+                <br>
+                <img class="footerlogo" src="../images/logout.png"
+                width="150">
+            </div>
+            <div class="col-2">
+                <br><br>
+                <h3>FOLLOW US</h3>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <br><br><br>
+                    <p>Copyright ©2024 Universitas Terbuka</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <br><br><br>
+                <a href="about-us.html">About Us</a>
+                <a href="https://maps.app.goo.gl/C6qMJeYTpkAgwe9F8">See Us On Map</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="sorting.js"></script>
+
+</body>
+</html>

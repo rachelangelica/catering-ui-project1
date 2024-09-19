@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Terbuka F&B - About Us</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="about-us-style.css">
+    <script src="https://kit.fontawesome.com/7617b7392d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="burger-icon"></div>
+        </div>
+        <a href="cust-homepage.html" class="logo"><img src="../images/logout.png" width="100px" ></a>
+        <ul>
+            <li><a href="../customer/cust-homepage.html">HOME</a></li>
+            <li><a href="../customer/catalogue.html">CATALOGUE</a></li>
+            <li><a href="../general/about-us.html">ABOUT US</a></li>
+        </ul>
+        <div class="icons">
+            <a href="../customer/cust-cart.html">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="../customer/cust-profile.html">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+        <div class="burger-menu">
+            <div class="burger-icon"></div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="text-box">
+            <h1>ABOUT US</h1>
+        </div>
+    </section>
+    
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
+
+    <!-- BODY -->
+    <section class="history">
+        <h1>
+            Our History
+        </h1>
+        <h2>
+            Pusat Pengelolaan Bisnis dan Investasi Universitas Terbuka, yang juga dikenal 
+            sebagai Badan Pengelola dan Pengembangan Usaha (BPPU) UT, dibentuk berdasarkan Surat Keputusan Rektor Nomor 2275/UN31/2015. 
+            BPPU terdiri dari tiga divisi utama: Divisi Fasilitas Layanan Umum, Divisi Pendidikan dan Pelatihan (Training Institute), 
+            dan Toko Buku. Program Training Institute memberikan layanan program pelatihan dan konsultasi kepada lembaga-lembaga 
+            serta masyarakat umum yang membutuhkan. Kepala dari PPBI-UT saat ini adalah Bapak Unggul Utan Sufandi S. Kom, M. Si., 
+            yang memimpin misinya untuk menyediakan layanan bisnis dan investasi yang komprehensif. Sejalan dengan komitmen 
+            Universitas Terbuka terhadap pembelajaran sepanjang hayat dan pelayanan masyarakat, PPBI-UT memainkan 
+            peran penting dalam meningkatkan keterampilan dan pengetahuan individu serta organisasi di Indonesia.
+            <br><br><br>Jangkauan luas dan program pendidikan inovatif Universitas Terbuka memiliki 
+            dampak signifikan pada industri makanan dan minuman (F&B). Melalui program pelatihan yang beragam, 
+            UT membekali individu dengan keterampilan yang diperlukan untuk berhasil di berbagai sektor, termasuk F&B. 
+            Kursus-kursus yang ditawarkan oleh Training Institute dapat membantu calon koki, manajer, dan pengusaha mendapatkan 
+            keahlian yang dibutuhkan untuk unggul dalam dunia kuliner yang kompetitif. Selain itu, kemitraan dengan UT memberikan 
+            peluang bagi bisnis F&B untuk terlibat dalam pembelajaran berkelanjutan, memastikan staf mereka selalu mengikuti tren 
+            dan praktik terbaru di industri. Komitmen ini terhadap pendidikan dan pengembangan sejalan dengan 
+            kebutuhan dinamis industri F&B, mendorong pertumbuhan dan keunggulan di seluruh sektor.
+        </h2>
+    </section>
+    
+    <div class="text">
+        <h1>
+            Email Us
+        </h1>
+    </div>
+
+    <section class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <input type="hidden" name="access_key" value="2d794e60-45b8-44c2-bd8e-ee972e211107">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </section>
+
+    <section class="info">
+        <h1>
+            Our Contact Information
+        </h1>
+
+        <div class="map-container" id="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.6759004822575!2d106.75849800478815!3d-6.3412747600434365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69efe5f6042973%3A0x4448b9a353c67420!2sWisma%20Universitas%20Terbuka!5e0!3m2!1sen!2sid!4v1716796296891!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>  
+    
+        <div class="infos">
+            <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>
+                    Jl. Cabe Raya, Pondok Cabe, Pamulang, Tangerang Selatan, Banten, 15418
+                </p>
+            </div>
+    
+            <div class="info-item">
+                <i class="fa-solid fa-phone"></i>
+                <p>Phone : (021) 7490941</p>
+            </div>
+    
+            <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p>ppbi@ecampus.ut.ac.id</p>
+            </div>
+    
+            <div class="info-item">
+                <i class="fa-solid fa-globe"></i>
+                <p>https://pusatbisnis.ut.ac.id/</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- FOOTER -->
+    <section class="footer">
+        <script src="https://kit.fontawesome.com/7617b7392d.js" crossorigin="anonymous"></script>
+            <div class="col-1">
+                <br>
+                <img class="footerlogo" src="../images/logout.png"
+                width="150">
+            </div>
+            <div class="col-2">
+                <br><br>
+                <h3>FOLLOW US</h3>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <br><br><br>
+                    <p>Copyright ©2024 Universitas Terbuka</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <br><br><br>
+                <a href="about-us.html">About Us</a>
+                <a href="https://maps.app.goo.gl/C6qMJeYTpkAgwe9F8">See Us On Map</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="sorting.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Terbuka F&B - Checkout</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="checkout-style.css">
+    <script src="https://kit.fontawesome.com/7617b7392d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="burger-icon"></div>
+        </div>
+        <a href="cust-homepage.html" class="logo"><img src="../images/logout.png" width="100px" ></a>
+        <ul>
+            <li><a href="../customer/cust-homepage.html">HOME</a></li>
+            <li><a href="../customer/catalogue.html">CATALOGUE</a></li>
+            <li><a href="../general/about-us.html">ABOUT US</a></li>
+        </ul>
+        <div class="icons">
+            <a href="cust-cart.html">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="cust-profile.html">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+        <div class="burger-menu">
+            <div class="burger-icon"></div>
+        </div>
+    </header>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
+
+    <!-- BODY -->
+    <div class="checkout">
+        <h1>Checkout details</h1>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <div class="input-box">
+                    <span class="booker-name">Name:</span>
+                    <input type="text" id="booker-name" name="booker-name" placeholder="Masukkan nama pemesan" required>
+                </div>
+                
+                <div class="input-box">
+                    <span class="event-name">Event Name:</span>
+                    <input type="text" id="event-name" name="event-name" placeholder="Masukkan nama kegiatan" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="event-type">Event Type:</span>
+                    <select id="event-type" name="event_type" required>
+                        <option value="vip">VIP/VVIP Event</option>
+                        <option value="internal">Internal Event</option>
+                        <option value="external">External Event</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <span class="serve-time">Serving Time:</span>
+                    <select name="serve-time"  id="serve-time" required>
+                        <option value="breakfast">Makan Pagi (05.00-10.00 WIB)</option>
+                        <option value="m-snack">Snack Pagi (09.00-11.00 WIB)</option>
+                        <option value="lunch">Makan Siang (12.00-13.00 WIB)</option>
+                        <option value="l-snack">Snack Siang (13.30-15.30 WIB)</option>
+                        <option value="dinner">Makan Malam (18.30-19.30 WIB)</option>
+                        <option value="n-snack">Snack Malam (19.30-21.00 WIB)</option>
+                    </select>
+                </div>
+
+                <div class="buffet-radio">
+                    <span class="buffet-type">Buffet Type:</span>
+                    <label for="buffet-type-prasmanan">
+                      <input type="radio" id="buffet-type-prasmanan" name="buffet-type" value="prasmanan"> Prasmanan
+                    </label>
+                    <label for="buffet-type-box">
+                      <input type="radio" id="buffet-type-box" name="buffet-type" value="box"> Box
+                    </label>
+                </div>
+                
+                <div class="inputbox">
+                    <fieldset id="event-place">
+                        <legend>Event Place:</legend>
+                        <h3>Put "-" if not needed</h3>
+                        <div class="input-box">
+                            <span class="address">Address:</span>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <span class="building">Building:</span>
+                            <input type="text" id="building" name="building" placeholder="Ex. Wisma 1" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <span class="floor">Floor:</span>
+                            <input type="text" id="floor" name="floor" placeholder="Ex. Lantai 1" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <span class="room">Room:</span>
+                            <input type="text" id="room" name="room" placeholder="Ex. Ruang A" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <span class="address-note">Shipment Note (Optional):</span>
+                            <input type="text" id="address-note" name="address-note">
+                        </div>
+    
+                    </fieldset>
+                </div>
+
+                <div class="input-box">
+                    <span class="event-date">Event Date:</span>
+                    <input type="date" id="event-date" name="event-date" required>
+                </div>
+            </div>
+        </form>
+
+        <div class="ordered-products">
+            <span class="products">Ordered Products:</span>
+            <table class="checkout-table">
+                <thead>
+                <tr>
+                    <th>Nama Produk</th>
+                    <th>Jumlah</th>
+                    <th>Harga Satuan</th>
+                    <th>Subtotal</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="nama-produk"><img src="../images/ayam.jpg" alt="ayaaam" width="150px">
+                    Nasi Goreng</td>
+                    <td>2</td>
+                    <td>Rp 20.000</td>
+                    <td>Rp 40.000</td>
+                </tr>
+                <tr>
+                    <td class="nama-produk"><img src="../images/ayam.jpg" alt="ayaaam" width="150px">
+                    Ayam Bakar</td>
+                    <td>3</td>
+                    <td>Rp 25.000</td>
+                    <td>Rp 75.000</td>
+                </tr>
+                <tr>
+                    <td class="nama-produk"><img src="../images/ayam.jpg" alt="ayaaam" width="150px">
+                    Es teh</td>
+                    <td>5</td>
+                    <td>Rp 5.000</td>
+                    <td>Rp 25.000</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td></td>
+                    <td></td>
+                    <td>Rp 140.000</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <p>Subtotal: Rp 140.000</p>
+                <p>Biaya Pengiriman: Rp 50.000</p>
+                <hr>
+                <p class="total">Total Pesanan: Rp 190.000</p>
+                <button class="checkout-btn">Order</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <script src="https://kit.fontawesome.com/7617b7392d.js" crossorigin="anonymous"></script>
+            <div class="col-1">
+                <br>
+                <img class="footerlogo" src="../images/logout.png"
+                width="150">
+            </div>
+            <div class="col-2">
+                <br><br>
+                <h3>FOLLOW US</h3>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <br><br><br>
+                    <p>Copyright ©2024 Universitas Terbuka</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <br><br><br>
+                <a href="about-us.html">About Us</a>
+                <a href="https://maps.app.goo.gl/C6qMJeYTpkAgwe9F8">See Us On Map</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

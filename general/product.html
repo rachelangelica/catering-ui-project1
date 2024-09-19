@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Terbuka F&B - Product</title>
+    <link rel="stylesheet" href="product-style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="burger-icon"></div>
+        </div>
+        <a href="cust-homepage.html" class="logo"><img src="../images/logout.png" width="100px" ></a>
+        <ul>
+            <li><a href="../customer/cust-homepage.html">HOME</a></li>
+            <li><a href="../customer/catalogue.html">CATALOGUE</a></li>
+            <li><a href="../general/about-us.html">ABOUT US</a></li>
+        </ul>
+        <div class="icons">
+            <a href="../customer/cust-cart.html">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="../customer/cust-profile.html">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+        <div class="burger-menu">
+            <div class="burger-icon"></div>
+        </div>
+    </header>
+
+
+    <!-- BODY -->
+    <div class="product-wrapper">
+        <div class="product-container">
+            <img src="../images/martabakkeju.jpg" width="40%" alt="foto" id="martabak">
+            <div class="product-details">
+                <h1>Nama Makanan</h1>
+                <p id="desc">Deskripsi Makanan</p>
+                <p id="price">Harga Makanan</p>
+
+                <div class="button-wrapper">
+                    <button class="favorites-btn" role="button">Save to Favorites</button>
+                    <button class="add-to-cart-btn" role="button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <script src="https://kit.fontawesome.com/7617b7392d.js" crossorigin="anonymous"></script>
+        <div class="col-1">
+            <br>
+            <img class="footerlogo" src="../images/logout.png" width="150">
+        </div>
+        <div class="col-2">
+            <br><br>
+            <h3>FOLLOW US</h3>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <br><br><br>
+                <p>Copyright ©2024 Universitas Terbuka</p>
+            </div>
+        </div>
+        <div class="col-3">
+            <br><br><br>
+            <a href="about-us.html">About Us</a>
+            <a href="https://maps.app.goo.gl/C6qMJeYTpkAgwe9F8">See Us On Map</a>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

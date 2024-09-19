@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Terbuka F&B - Register</title>
+    <link rel="stylesheet" href="registerstyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <h1>
+                Create an Account
+            </h1>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Username">
+                    <i class='bx bxs-user'></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="email" placeholder="Email" required>
+                    <i class='bx bx-envelope' ></i>
+                </div>
+                <div class="input-field">
+                    <input type="tel" placeholder="Phone number">
+                    <i class='bx bxs-phone' ></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Confirm Password">
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <p>User Type:</p>
+                <div class="radio-options">
+                    <input type="radio" id="customer" name="user_type" value="customer" checked>
+                    <label for="customer">Customer</label><br>
+                    
+                    <input type="radio" id="vendor" name="user_type" value="vendor">
+                    <label for="vendor">Vendor</label><br>
+                    
+                    <input type="radio" id="admin" name="user_type" value="admin">
+                    <label for="admin">Admin</label><br>
+                    
+                    <input type="radio" id="petugas-penerima" name="user_type" value="petugas-penerima">
+                    <label for="petugas-penerima">Petugas Penerima Konsumsi</label><br>
+                    
+                    <input type="radio" id="petugas-sop" name="user_type" value="petugas-sop">
+                    <label for="petugas-sop">Petugas Operasional</label><br>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">
+                Register
+            </button>
+            <h3>Already have an account? <a href="login.html">Login here</a></h3>
+            
+        </form>
+    </div>
+</body>
+</html>

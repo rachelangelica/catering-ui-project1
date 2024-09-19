@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Terbuka F&B - Orders</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="cust-cart-style.css">
+    <script src="https://kit.fontawesome.com/7617b7392d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="burger-icon"></div>
+        </div>
+        <a href="cust-homepage.html" class="logo"><img src="../images/logout.png" width="100px" ></a>
+        <ul>
+            <li><a href="../customer/cust-homepage.html">HOME</a></li>
+            <li><a href="../customer/catalogue.html">CATALOGUE</a></li>
+            <li><a href="../general/about-us.html">ABOUT US</a></li>
+        </ul>
+        <div class="icons">
+            <a href="cust-cart.html">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="cust-profile.html">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+        <div class="burger-menu">
+            <div class="burger-icon"></div>
+        </div>
+    </header>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0)
+        })
+    </script>
+
+
+    <!-- BODY -->
+    <div class="container">
+        <h1>Shopping Cart</h1>
+
+        <div class="search-bar">
+            <form onsubmit="searchAndHighlight(event);" role="search">
+                <!-- <label for="search">Search</label> -->
+                <input id="search" type="search" placeholder="Search for your order here..." autofocus required />
+                <button type="submit">Search</button>    
+            </form>
+        </div>
+    
+        <div class="shopping-cart">
+            <!-- Cart Item 1 -->
+            <div class="cart-item">
+                <img src="/images/ayamgeprek.jpg" alt="Product 1">
+                <div class="cart-item-details">
+                    <h3>Ayam Geprek</h3>
+                    <p>Ayam Geprek Mas Arif | ayam + nasi + selada/timun + sambal
+                    </p>
+                    <p>Quantity: 3</p>
+                </div>
+                <div class="cart-item-price">Rp 75.000</div>
+            </div>
+    
+            <!-- Cart Item 2 -->
+            <div class="cart-item">
+                <img src="/images/estehmanis.jpg" alt="Product 2">
+                <div class="cart-item-details">
+                    <h3>Es Teh Manis</h3>
+                    <p>Ayam Geprek Mas Arif | es teh manis (bungkus)</p>
+                    <p>Quantity: 3</p>
+                </div>
+                <div class="cart-item-price">Rp 15.000</div>
+            </div>
+    
+            <!-- Cart Item 3 -->
+            <div class="cart-item">
+                <img src="/images/martabakkeju.jpg" alt="Product 2">
+                <div class="cart-item-details">
+                    <h3>Martabak Manis Keju</h3>
+                    <p>Martabak Oriental | Keju only + tambahan susu kental manis</p>
+                    <p>Quantity: 1</p>
+                </div>
+                <div class="cart-item-price">Rp 23.000</div>
+            </div>
+    
+            <!-- Total Section -->
+            <div class="total-section">
+                <p class="jumlah">Item: Rp 113.000 <br> Tarif ongkir: Rp 25.000 <br></p>
+                <p class="total">TOTAL: Rp 138.000</p>
+            </div>
+
+            <section class="checkout-order">
+                <button class="checkout-order-btn" id="checkout-order-btn">Checkout</button>
+            </section>
+            
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('checkout-order-btn').addEventListener('click', function() {
+            window.location.href = '../customer/checkout.html';
+        });
+
+        function searchAndHighlight(event) {
+            event.preventDefault();
+            
+            // Remove previous highlights
+            document.querySelectorAll('mark').forEach((mark) => {
+                mark.replaceWith(...mark.childNodes);
+            });
+    
+            const searchText = document.getElementById('search').value.toLowerCase();
+            const textNodes = getTextNodesUnder(document.body);
+            
+            textNodes.forEach((node) => {
+                const nodeText = node.nodeValue.toLowerCase();
+                const startIndex = nodeText.indexOf(searchText);
+                
+                if (startIndex !== -1) {
+                    const endIndex = startIndex + searchText.length;
+                    const range = document.createRange();
+                    range.setStart(node, startIndex);
+                    range.setEnd(node, endIndex);
+                    
+                    const mark = document.createElement('mark');
+                    range.surroundContents(mark);
+                }
+            });
+        }
+    
+        function getTextNodesUnder(node) {
+            let all = [];
+            for (node = node.firstChild; node; node = node.nextSibling) {
+                if (node.nodeType == 3) all.push(node);
+                else all = all.concat(getTextNodesUnder(node));
+            }
+            return all;
+        }
+    </script>
+    
+    <!-- FOOTER -->
+    <section class="footer">
+        <script src="https://kit.fontawesome.com/7617b7392d.js" crossorigin="anonymous"></script>
+            <div class="col-1">
+                <br>
+                <img class="footerlogo" src="../images/logout.png"
+                width="150">
+            </div>
+            <div class="col-2">
+                <br><br>
+                <h3>FOLLOW US</h3>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                    <br><br><br>
+                    <p>Copyright ©2024 Universitas Terbuka</p>
+                </div>
+            </div>
+            <div class="col-3">
+                <br><br><br>
+                <a href="about-us.html">About Us</a>
+                <a href="https://maps.app.goo.gl/C6qMJeYTpkAgwe9F8">See Us On Map</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
